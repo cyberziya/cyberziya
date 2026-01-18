@@ -3,64 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Ziya</title>
-    <link rel="stylesheet" href="ziya.css">
+    <title>Cyber Ziya - Student Success Website</title>
+    <link rel="stylesheet" href="zeyu.css">
 </head>
 <body>
 
-    <!-- Header with Photo and Name -->
+    <!-- Header -->
     <header>
-        <img src="ziya.jpg" alt="Zeeshan Manzoor" class="profile-pic">
-        <h1>Zeeshan Manzoor</h1>
-        <p>From Kashmir | Helping Students Succeed</p>
+        <h1>Welcome to Cyber Ziya's World</h1>
+        <p>Learn, Grow, and Become Successful!</p>
     </header>
 
+    <!-- My Photo Section -->
+    <section class="photo-section">
+        
+    </section>
+
     <!-- About Me Section -->
-    <section id="about">
+    <section class="about-me">
         <h2>About Me</h2>
-        <p>Hello! I am Zeeshan Manzoor from Kashmir. I love creating websites and helping students achieve success in their studies and life.</p>
-        <a href="https://www.youtube.com/@cyberziya" target="_blank" class="youtube-btn">Visit My YouTube Channel</a>
+        <p>
+        Hello! I am Zeeshan Manzoor from Kashmir. I have a passion for learning and sharing knowledge about technology, coding, and digital skills. I love creating websites, exploring new programming languages, and helping students succeed in their studies and life.  
+        <br><br>
+        I believe that every student has the potential to become successful if they are guided and motivated properly. Through my work, I want to provide tutorials, tips, and tools that will make learning easy, interesting, and effective.  
+        <br><br>
+        My goal is to inspire students to dream big, work hard, and achieve their goals. I am constantly learning new skills in web development, design, and technology to improve my abilities and share them with others.  
+        <br><br>
+        I am focused, determined, and ready to face challenges to become a successful professional in the field of technology. This website is a small step towards showing my skills and sharing my journey with others.
+      </p>
+
+      <section id="login">
+  <h2>Login</h2>
+  <form onsubmit="return checkLogin()">
+    <input type="text" id="username" placeholder="Username" required><br><br>
+    <input type="password" id="password" placeholder="Password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <p id="login-msg"></p>
+</section>
+
+
     </section>
 
-    <!-- Login Form Section -->
-    <section id="login">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
+    <!-- YouTube Section -->
+    <section class="youtube-section">
+        <h2>Check Out My YouTube Channel</h2>
+        <a href="https://www.youtube.com/@cyberziya" target="_blank">
+            Visit My Channel
+        </a>
     </section>
 
-    <!-- Rating Section -->
-    <section id="rating">
-        <h2>Rate My Website</h2>
-        <div class="stars">
-            <span class="star" data-value="1">&#9733;</span>
-            <span class="star" data-value="2">&#9733;</span>
-            <span class="star" data-value="3">&#9733;</span>
-            <span class="star" data-value="4">&#9733;</span>
-            <span class="star" data-value="5">&#9733;</span>
-        </div>
-        <p id="ratingValue">Your rating: 0</p>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section id="contact">
+    <!-- Contact Section -->
+    <section class="contact-section">
         <h2>Contact Me</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" value="cyberziya96@gmail.com" required>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <p>If you want to reach out, send me an email:</p>
+        <a href="mailto:cyberziya96@gmail.com" class="email-btn">cyberziya96@gmail.com</a>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Cyber Ziya | Kashmir</p>
-    </footer>
+    <script src="zeyu.js"></script>
+     
 
-    <script src="ziya.js"></script>
+    <section id="rating">
+  <h2>Rate My Website</h2>
+  <div class="stars">
+    <span onclick="rate(1)">★</span>
+    <span onclick="rate(2)">★</span>
+    <span onclick="rate(3)">★</span>
+    <span onclick="rate(4)">★</span>
+    <span onclick="rate(5)">★</span>
+  </div>
+  <p id="rating-value"></p>
+</section>
 </body>
 </html>
