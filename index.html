@@ -3,47 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Ziya - Student Success Website</title>
-    <link rel="stylesheet" href="zeyu.css">
+    <title>Cyber Ziya</title>
+    <link rel="stylesheet" href="ziya.css">
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header with Photo and Name -->
     <header>
-        <h1>Welcome to Cyber Ziya's World</h1>
-        <p>Learn, Grow, and Become Successful!</p>
+        <img src="ziya.jpg" alt="Zeeshan Manzoor" class="profile-pic">
+        <h1>Zeeshan Manzoor</h1>
+        <p>From Kashmir | Helping Students Succeed</p>
     </header>
 
-    <!-- My Photo Section -->
-    <section class="photo-section">
-        <img src="ziya-photo.jpg" alt="Ziya's Photo" class="my-photo">
-    </section>
-
     <!-- About Me Section -->
-    <section class="about-me">
+    <section id="about">
         <h2>About Me</h2>
-        <p>
-            Hello! I am <strong>Ziya</strong> from Kashmir. I am a passionate student learning
-            <em>HTML, CSS, and JavaScript</em>. My goal is to become a successful web developer
-            and inspire other students to achieve their dreams through learning and coding.
-        </p>
+        <p>Hello! I am Zeeshan Manzoor from Kashmir. I love creating websites and helping students achieve success in their studies and life.</p>
+        <a href="https://www.youtube.com/@cyberziya" target="_blank" class="youtube-btn">Visit My YouTube Channel</a>
     </section>
 
-    <!-- YouTube Section -->
-    <section class="youtube-section">
-        <h2>Check Out My YouTube Channel</h2>
-        <a href="https://www.youtube.com/@cyberziya" target="_blank">
-            Visit My Channel
-        </a>
+    <!-- Login Form Section -->
+    <section id="login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
+    <!-- Rating Section -->
+    <section id="rating">
+        <h2>Rate My Website</h2>
+        <div class="stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <p id="ratingValue">Your rating: 0</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
         <h2>Contact Me</h2>
-        <p>If you want to reach out, send me an email:</p>
-        <a href="mailto:cyberziya96@gmail.com" class="email-btn">cyberziya96@gmail.com</a>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" value="cyberziya96@gmail.com" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
 
-    <script src="zeyu.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Cyber Ziya | Kashmir</p>
+    </footer>
+
+    <script src="ziya.js"></script>
 </body>
-</html>s
+</html>
