@@ -1,4 +1,2 @@
-function changeText(){
-  document.getElementById("demo").innerText =
-  "JavaScript is working perfectly 🚀";
-}
+// Simple greeting alert
+console.log("Welcome to Cyber Ziya's website!");
