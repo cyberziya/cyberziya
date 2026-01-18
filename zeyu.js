@@ -1,26 +1,40 @@
-// Rating Stars
-const stars = document.querySelectorAll('.star');
-const ratingValue = document.getElementById('ratingValue');
+// Welcome Alert
+window.onload = function() {
+    alert("Welcome to Cyber Ziya's Website!");
+}
 
-stars.forEach(star => {
-    star.addEventListener('click', () => {
-        const value = star.getAttribute('data-value');
-        stars.forEach(s => s.classList.remove('selected'));
-        for (let i = 0; i < value; i++) {
-            stars[i].classList.add('selected');
+// Visit YouTube Button
+function visitYouTube() {
+    window.open("https://www.youtube.com/@cyberziya", "_blank");
+}
+
+function checkLogin() {
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+
+    // Simple check (example: username = admin, password = 1234)
+    if(user === "admin" && pass === "1234") {
+        alert("Login Successful!");
+        document.getElementById('login-msg').innerText = "Welcome, " + user + "!";
+    } else {
+        alert("Login Failed!");
+        document.getElementById('login-msg').innerText = "Invalid username or password!";
+    }
+    return false; // prevent page reload
+}
+
+// Contact Me Button
+function contactMe() {
+    window.location.href = "mailto:cyberziya96@gmail.com";
+}
+function rate(star) {
+    const stars = document.querySelectorAll('.stars span');
+    stars.forEach((s, index) => {
+        if(index < star) {
+            s.classList.add('selected');
+        } else {
+            s.classList.remove('selected');
         }
-        ratingValue.textContent = `Your rating: ${value}`;
     });
-});
-
-// Login Form
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Login feature not connected yet!');
-});
-
-// Contact Form
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Message sent! (Demo only, not a real email)');
-});
+    document.getElementById('rating-value').innerText = `You rated: ${star} star(s)`;
+}
